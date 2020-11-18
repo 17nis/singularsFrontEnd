@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll columnes</title>
+    <style>
+        body{
+            max-width: 1024px;
+            margin: auto;
+        }
+        section{
+            background-image: url("./img/panteon.jpg");
+            width: 722px;
+            height: 480px;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            justify-content: space-around;
+            width: 430px;
+        }
+        .column{
+            overflow: auto;
+            width: 80px;
+            height: 167px;
+            margin-top: 16px;
+            margin-left: 0px;
+            padding: 5px;
+            font-size: 0.8em;
+        }
+        .title{
+            background-color: wheat;
+            color: darkgoldenrod;
+            margin: 80px 100px;
+            text-align: center;
+            width: 300px;
+            height: 35px;
+            padding: 0px;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div >
+                <h1 class="title">Exercici Scroll </h1>
+            </div>
+            <div class="column">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iste doloremque explicabo, eligendi sint molestias facilis ducimus aut laborum a. Iure, iusto cumque! Molestiae nobis perferendis fuga provident, expedita commodi.</p>
+            </div>
+            <div class="column">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iste doloremque explicabo, eligendi sint molestias facilis ducimus aut laborum a. Iure, iusto cumque! Molestiae nobis perferendis fuga provident, expedita commodi.</p>
+            </div>
+            <div class="column">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iste doloremque explicabo, eligendi sint molestias facilis ducimus aut laborum a. Iure, iusto cumque! Molestiae nobis perferendis fuga provident, expedita commodi.</p>
+            </div>
+        </div>
+
+    </section>
+    
+</body>
+</html>

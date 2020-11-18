@@ -1,0 +1,56 @@
+body{
+    width: 1200px;
+    margin: auto;
+    background-color: wheat;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+h1{
+    color: burlywood;
+}
+ul.nav{
+   list-style: none; 
+   padding: 0;
+}
+ul.nav li{
+    display: inline-block;
+}
+ul.nav li a{
+    display: inline-block;
+    padding: 1em;
+    background-color: burlywood;
+    color: whitesmoke;
+    text-decoration: none;
+}
+p{
+    padding-top: 2px;
+    text-align: left;
+    text-align: justify;
+}
+span.highlight{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: burlywood;
+}
+span.quote{
+    font-variant: small-caps;
+    font-size: 1.1 em;
+    font-style: italic;
+}
+img.right{
+    float:right;
+    padding-top: 0px;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+img.left{
+    float:left;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+h2{
+    background-color: burlywood;
+    text-align: left;
+    color: white;
+}

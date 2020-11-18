@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joc rectangles</title>
+    <style>
+        /* Hola Omar, això no sé si s'ha de fer així, però ja no puc més :/  */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 1024px;
+        }
+        .cont{
+            width: 250px;
+            height: 200px;
+            display: inline-block;
+            justify-content: space-around;
+            margin: 40px;
+        }
+        .rojo{
+            width: 25px;
+            height: 200px;
+            background-color: red;
+        }
+        .amarillo{
+            width: 200px;
+            height: 25px;
+            background-color: yellow;
+        }
+        .azul{
+            width: 200px;
+            height: 150px;
+            background-color: blue;
+        }
+        .morado{
+            width: 200px;
+            height: 25px;
+            background-color: purple;
+        }
+        .verde{
+            width: 25px;
+            height: 200px;
+            background-color: green;
+        }
+        .flexColumn{
+            display: flex;
+            flex-direction: column;
+        }
+        .flexRow{
+            display: flex;
+            flex-direction: row;
+        }
+        .block{
+            display: block;
+        }
+        .inline{
+            display: inline-block;
+        }
+        .right{
+            float: right;
+            margin: 0px;
+            padding: 0px;
+        }
+        .left{
+            float: left;
+        }
+        .title{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h2>Finestra amb flex</h2>
+        <h2>Finestra amb block</h2>
+        <h2>Finestra amb float</h2>
+    </div>
+    <div>
+        <div class= "cont">
+            <div class="inline rojo">                
+            </div><div class="inline">
+                <div class="flexColumn amarillo"></div>
+                <div class="flexColumn azul"></div>
+                <div class="flexColumn morado"></div>
+            </div><div class="inline verde"></div>
+        </div>
+        <div class="cont">
+            <div class="rojo inline">
+            </div><div class="inline">
+                <div class="amarillo"></div>
+                <div class="azul "></div>
+                <div class="morado"></div>
+            </div><div class="verde inline"></div>
+        </div>
+        <div class="cont">
+            <div class="rojo left">                
+            </div><div class="inline">
+                <div class="amarillo block"></div>
+                <div class="azul block"></div>
+                <div class="morado block"></div>
+            </div><div class="verde right"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

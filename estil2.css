@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap');
+
+body{
+    width: 720px;
+    margin: auto;
+    background-color: grey;
+    font-family: 'Xanh Mono', monospace;
+    text-align: center;
+    padding-top: 20px;
+    color: whitesmoke;
+}
+ul.nav{
+   list-style: none; 
+   padding: 0;
+   display: flex;
+   justify-content: space-around;
+   padding: 0px 100px;
+}
+ul.nav li{
+    display: inline-block;
+}
+ul.nav li a{
+    display: inline-block;
+    padding: 1em;
+    background-color: whitesmoke;
+    color: #808080;
+    text-decoration: none;
+}
+p{
+    padding-top: 0px;
+    text-align: left;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+span.highlight{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: whitesmoke;
+}
+span.quote{
+    font-variant: small-caps;
+    font-size: 1.1 em;
+    font-style: italic;
+}
+img{
+    float:right;
+    padding-top: 0px;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+h2{
+    background-color: whitesmoke;
+    text-align: left;
+    color: grey;
+}

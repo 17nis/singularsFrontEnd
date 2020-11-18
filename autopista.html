@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northern lights</title>
+    <style>
+        body{
+            width: 100%;
+            margin: 0;
+        }
+        /* imatge de fons */
+        .image{
+            width: 100%;
+            z-index: -1;
+            position: fixed;
+        }
+        /* navigation */
+        nav{
+            background-color: rgba(255, 255, 255, 0.158);
+            position:sticky;
+            top:0px;
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            width: 800px;
+            list-style: none;
+        }
+        nav ul li{
+            padding: 10px 30px;
+            border-radius: 5px;
+        }
+        nav ul li:hover{
+            background-color: rgba(255, 255, 255, 0.223);
+        }
+        nav ul a{
+            text-decoration: none;
+            color: white;
+        }
+        .borderRight{
+            border-right: 2px solid white;;
+        }
+        /* header */
+        header{
+            height: 400px;
+            width: 100%;
+        }
+        /* section */
+        section{
+            background-color: white;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        section div{
+            width: 800px;
+            margin: auto;
+        }
+        h1{
+            text-align: center;
+        }
+        
+        .contenidorColumns{
+            display: flex;
+            justify-content: space-around;
+        }
+        .columns{
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <img class="image" src="./img/northernLight.jpeg" alt="Background image">
+    <header>
+        <nav>
+        <ul>
+            <a href="#"><li class="borderRight">Home</li></a>
+            <a href="#"><li class="borderRight">Portfolio</li></a>
+            <a href="#"><li class="borderRight">Contact</li></a>
+            <a href="#"><li>Blog</li></a>
+        </ul>
+    </nav>
+    </header>
+    <section>
+        <div>
+            <div>
+                <h1>On the north again</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti a distinctio aspernatur ex neque voluptatum consequatur dicta pariatur iure, at consectetur, nemo fugiat. Laborum aspernatur alias, veniam, repellat officiis quae optio quia inventore aliquid voluptatem tempora corrupti fugiat accusantium nulla nostrum modi ullam rem repellendus nam facilis! Aperiam aliquid saepe voluptates quis rerum cumque quod, iure quidem sit officia enim.</p>
+            </div>
+            <div class="contenidorColumns">
+                <div class="columns">
+                    <h2>Tampere</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed cum officia ut reiciendis officiis magnam perspiciatis accusantium dolorem voluptatum corporis velit cupiditate omnis vitae ratione eligendi, at id porro?</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="columns">
+                    <h2>Tampere</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed cum officia ut reiciendis officiis magnam perspiciatis accusantium dolorem voluptatum corporis velit cupiditate omnis vitae ratione eligendi, at id porro?</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="columns">
+                    <h2>Tampere</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed cum officia ut reiciendis officiis magnam perspiciatis accusantium dolorem voluptatum corporis velit cupiditate omnis vitae ratione eligendi, at id porro?</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="block">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noticies</title>
+    <link rel="icon" type="image/png" href="./img/favicon-32x32.png"/>
+    <style> 
+        @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap'); /*font importada d'internet*/
+    </style>
+    <style>
+        @font-face { /*font descarregada*/
+        font-family: dates;
+        src: url(./res/SyneTactile-Regular.ttf);
+        }
+        body{
+            max-width: 1024px; 
+            margin: auto;
+
+        }
+        h1{
+            text-align: center;
+        }
+        h2{
+            margin-top: 2em;
+            border-bottom: 3px solid lawngreen;
+            font-size: 2em;
+            font-family: 'Syne Mono', monospace;
+        }
+        span.bold{
+            font-weight: bold;
+            color: green;
+        }
+        span.highlight{
+            font-size: 1.2em;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        span.date{
+            background-color:lawngreen;
+            font-family: dates;
+        }
+        div.news{
+            margin-top: 2em;
+            text-align: center;
+        }
+        .news p{   /*tots els p dins de la classe "news" */
+            text-align: justify;
+        }
+    </style> 
+</head>
+<body>
+    <header>
+        <a href="./apunts.html">Torna als apunts</a> 
+        <!-- <h1 style="background-color: crimson; padding: 5%; font-size: 8em;">New News</h1> -->
+        <h1><img src="./img/news.jpg" alt="Texto alternativo de la imagen" width="1024px"></h1>
+    </header>
+    
+
+    <div class="news">
+        <h2>News 1</h2>
+        <h3 ><span class="date">29/02/2021</span></h3>
+        <p style=" margin-block-end: 5em; text-align: justify;">Lorem ipsum dolor <span style="font-weight: bolder">sit amet consectetur adipisicing elit</span>. Accusantium tempore, quasi veniam ipsa cupiditate itaque <span style="font-size: 1.7em;"> voluptas eveniet earum animi aliquid totam quam </span> quaerat, obcaecati, labore laborum exercitationem maiores ipsum enim!</p>
+    </div>
+    
+    <div class="news">
+        <h2>News 2</h2>
+        <h3><span class="date">29/02/2021</span></h3>
+        <p style=" margin-block-end: 5em; text-align: justify">Lorem ipsum dolor sit amet <span style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-stretch: ultra-condensed;">consectetur adipisicing elit. Accusantium tempore, quasi veniam ipsa cupiditate itaque voluptas eveniet earum animi aliquid totam </span> <span style="font-family: Georgia, 'Times New Roman', Times, serif; font-weight: lighter;">quam quaerat, obcaecati, labore laborum exercitationem maiores ipsum enim!</span></p>
+    </div>
+
+    <div class="news">
+        <h2>News 3</h2>
+        <h3><span class="date">29/02/2021</span></h3>
+        <p style=" margin-block-end: 5em; text-align: justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tempore, quasi veniam ipsa cupiditate itaque voluptas eveniet earum <span class="bold"> animi aliquid totam quam quaerat, obcaecati, labore laborum exercitationem maiores ipsum enim!Lorem ipsum dolor sit amet </span>consectetur adipisicing elit. <span class="highlight">Accusantium tempore, quasi veniam ipsa cupiditate itaque voluptas eveniet earum animi aliquid totam quam quaerat, obcaecati, labore </span>laborum exercitationem maiores ipsum enim!</p>
+    </div>
+    
+
+    
+</body>
+</html>

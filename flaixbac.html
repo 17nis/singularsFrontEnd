@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copia web</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&display=swap');
+    </style>
+    <style>
+        body{
+            width: 970px;
+            margin: auto;
+            background: linear-gradient(90deg, rgba(231,80,34,0.6) 0%, rgba(226,154,35,0.6) 100%);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .fons{
+            background-color: white;
+            border-radius: 20px;
+            width: 970px;
+        }
+        header{
+            display: flex;
+        }
+        header ul{
+            padding-top: 15px;
+            margin-left: 200px;
+            margin-bottom: 0px;
+        }
+        header ul li{
+            list-style: none;
+            margin-left: 15px;
+            margin-right: 20px;
+            display: inline-block;
+            font-size: 1.2em;
+        }
+        a{
+            color: black;
+        }
+        header img{
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
+        .requadre{
+            background: linear-gradient(90deg, rgba(231,80,34,0.8) 0%, rgba(226,154,35,0.8) 100%);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        h2{
+            text-align: center;
+            font-weight: 800;
+        }
+        .columns{
+            display: flex;
+            justify-content: space-around;
+        }
+        .cont{
+            width: 275px;
+            text-align: justify;
+        }
+        .title{
+            font-weight: 400;
+        }
+        .text{
+            font-weight: 200;
+        }
+        .image{
+            width: 275px;
+            height: auto;
+        }
+        .end{
+            border-top: 1px solid black;
+            margin-top: 20px;
+            margin-left: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .endBox{
+            margin-left: 200px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .endList{
+            list-style: none;
+            margin-left: 15px;
+            margin-right: 20px;
+            display: inline-block;
+            font-size: 1.2em;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="fons">
+        <header>
+            <img src="./img/flaix.png" width="280px" height="auto" alt="logo">
+            <ul>
+                <a href="#"><li class="requadre">Inici</li></a>
+                <a href="#"><li>Videos</li></a>
+                <a href="#"><li>Albums</li></a>
+                <a href="#"><li>Contacte</li></a>
+            </ul>
+        </header>
+        <section>
+            <img src="./img/banner.png" width="970px" height="auto" alt="banner">
+            <h2>Exercici de HTML5 i CSS3</h2>
+        </section>
+        <div class="columns">
+            <div class="cont">
+                <div class="title"><h3>Novetats musicals</h3></div>
+                <div>
+                    <img class="image" src="./img/novetat.png" alt="novetats">
+                </div>
+                <div class="text">Repassem les novetats musicals de divendres amb el Josep Moragas i l'Alberto Rey. Aitana amb Katy Perry, el més nou d'Oques Grasses o Billie Eilish dins de les novetats de divendres</div>
+            </div>
+            <div class="cont">
+                <div class="title"><h3>Podcast "El matí"</h3></div>
+                <div>
+                    <img class="image" src="./img/podcast.png" alt="Podcast">
+                </div>
+                <div class="text">PODCAST: El Matí i la Mare que el va Parir escolta el podcast amb els millors moments de la setmana. Recupera els millors moments de la setmana, tot concentrat i sense interrupcions!</div>
+            </div>
+            <div class="cont">
+                <div class="title"><h3>Música per estudiar</h3></div>
+                <div>
+                    <img class="image" src="./img/estudiar.jpg" alt="Estudiar">
+                </div>
+                <div class="text">T'expliquem quines cançons t'ajudaran a estudiar millor! Anna Ventura, la nostra experta en anàlisi musical, ens explica per què hi ha música que ens agrada, que ens fa concentrar i ens en posa exemples.</div>
+            </div>
+        </div>
+        <div class="end">
+            <div>   
+                <p>Web d'exemple</p>
+                <p>16/11/2020</p>
+            </div> 
+            <ul class="endBox">
+                <a href="#"><li class="requadre endList">Inici</li></a>
+                <a href="#"><li class="endList">Videos</li></a>
+                <a href="#"><li class="endList">Albums</li></a>
+                <a href="#"><li class="endList">Contacte</li></a>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
