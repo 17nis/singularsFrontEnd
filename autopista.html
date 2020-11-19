@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Northern lights</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&display=swap');
+    </style>
+    <style>
         body{
             width: 100%;
             margin: 0;
+            font-family: 'Solway', serif;
         }
         /* imatge de fons */
         .image{
@@ -44,12 +48,13 @@
         }
         /* header */
         header{
-            height: 400px;
+            height: 450px;
             width: 100%;
         }
         /* section */
         section{
-            background-color: white;
+            background: rgb(56,197,184);
+            background: radial-gradient(circle, rgba(56,197,184,1) 0%, rgba(75,191,118,1) 100%);
             width: 100%;
             display: flex;
             justify-content: center;
@@ -60,14 +65,81 @@
         }
         h1{
             text-align: center;
+            color: white;
+            font-size: 2em;
+            font-weight: 700;
         }
-        
+        h2{
+            color: white;
+            text-align: center;
+            font-weight: 500;
+        }
+        section p{
+            color: rgb(217, 243, 237);
+            text-align: justify;
+            font-weight: 300;
+        }
         .contenidorColumns{
+            border: top ;
+            margin-top: 30px;
             display: flex;
             justify-content: space-around;
         }
         .columns{
             width: 30%;
+            text-align: center;
+        }
+        .columns a{
+            text-decoration: none;
+            color: rgb(180, 221, 211);
+            text-align: center;
+            width: 100%;
+            padding: 10px 40px;
+            background-color: rgb(42, 167, 150);
+            border-radius: 5px;
+        }
+        .columns a:hover{
+            color: white;
+            background-color:  rgb(59, 199, 180);
+        }
+        .bigBlock{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 100px;
+        }
+        .littleBlocks{
+            width: 45%;
+        }
+        .transparent{
+            padding:50px;
+            width: 100%;
+            height: 55vh;
+            color: white;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+        .footer{
+            background: rgb(56,197,184);
+            background: radial-gradient(circle, rgb(46, 163, 151) 0%, rgb(57, 146, 90) 100%);
+            color:white;
+            padding: 50px
+        }
+        .footer p{
+            text-align: center;
+            font-weight: 300;
+        }
+        .credit{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-style: italic;
+            font-weight: 100;
+            font-size: 0.7em;
+            padding: 10px;
+        }
+        .container{
+            width: 800px;
+            margin: auto;
         }
     </style>
 </head>
@@ -96,24 +168,52 @@
                     <a href="#">Read More</a>
                 </div>
                 <div class="columns">
-                    <h2>Tampere</h2>
+                    <h2>Oulu</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed cum officia ut reiciendis officiis magnam perspiciatis accusantium dolorem voluptatum corporis velit cupiditate omnis vitae ratione eligendi, at id porro?</p>
                     <a href="#">Read More</a>
                 </div>
                 <div class="columns">
-                    <h2>Tampere</h2>
+                    <h2>Rovaniemi</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sed cum officia ut reiciendis officiis magnam perspiciatis accusantium dolorem voluptatum corporis velit cupiditate omnis vitae ratione eligendi, at id porro?</p>
                     <a href="#">Read More</a>
                 </div>
             </div>
-            <div class="block">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+            <div class="bigBlock">
+                <div class="littleBlocks" >
+                    <img src='http://unsplash.it/360/200?random&gravity=left' alt='imatge del bloc'/>
+                    <h2>Adventure</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero quidem laborum vel nobis, eum temporibus numquam suscipit aut explicabo beatae. Excepturi recusandae sint quod nulla porro libero tempora et officiis?</p>
+                </div>
+                <div class="littleBlocks" >
+                    <img src='http://unsplash.it/360/200?random&gravity=right' alt='imatge del bloc'/>
+                    <h2>Adventure</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero quidem laborum vel nobis, eum temporibus numquam suscipit aut explicabo beatae. Excepturi recusandae sint quod nulla porro libero tempora et officiis?</p>
+                </div>
+                <div class="littleBlocks" >
+                    <img src='http://unsplash.it/360/200?random&gravity=south' alt='imatge del bloc'/>
+                    <h2>Adventure</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero quidem laborum vel nobis, eum temporibus numquam suscipit aut explicabo beatae. Excepturi recusandae sint quod nulla porro libero tempora et officiis?</p>
+                </div>
+                <div class="littleBlocks" >
+                    <img src='http://unsplash.it/360/200?random&gravity=north' alt='imatge del bloc'/>
+                    <h2>Adventure</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero quidem laborum vel nobis, eum temporibus numquam suscipit aut explicabo beatae. Excepturi recusandae sint quod nulla porro libero tempora et officiis?</p>
+                </div>
             </div>
         </div>
     </section>
+    <div class="transparent">
+        <div class="container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quos accusantium. Tenetur officiis voluptatem, iusto nisi quos, illum perspiciatis cum animi ipsa eos recusandae possimus.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <h2>More information</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quaerat repellat error facilis, asperiores, corrupti fugiat reprehenderit sapiente recusandae sed eius ipsa similique! Vero, perferendis.</p>
+            <p class="credit">© 2020 Barcelona. Genís Frigola Camps. Photo by Genís Frigola Camps </p>
+        </div>
+    </div>
     
 </body>
 </html>
