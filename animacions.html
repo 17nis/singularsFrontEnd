@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacions</title>
+    <style>
+        /* animate.css (llibreria)  animista.net */
+        div{
+            width: 400px;
+            height: 300px;
+            transition: 1s;
+            background-color: blue;
+            margin:10px;
+            font-size: 2em;
+            color: white;
+            text-align: center;
+        }
+        div.one{
+            position: absolute;
+            left:600px;
+        }
+        div.one:hover{
+            position:relative;
+            left:700px; 
+        }
+        div.two:hover{ transform: rotatey(180deg);  }
+        div.three{
+            position: absolute;
+            left: 600px;
+        }
+        div.three:hover{
+            transform: rotatez(180deg);  
+            position:relative;
+            left:700px;
+        }
+        div.four:hover{
+            opacity: 0;
+        }
+        div.five{
+            transition: none;
+            left:600px;
+            position: absolute;
+        }
+        div.five:hover{
+            transition: 0.2s;
+            opacity: 0;
+            transform: scale(2.8);
+            left: 600px;
+            position: relative;
+        }
+        div.six:hover{ background-color: red;  }
+        div.seven:hover{
+            width: 600px;
+
+        }
+        div.eight{
+            background-image: url(./img/omar.png);
+            background-position: 0px 300px;
+            background-repeat: no-repeat;
+        }
+        div.eight:hover{
+            background-position:0px  0px;
+        }
+        div.nine:hover p{font-size: 4em; transition: 1s;
+        margin:0px; padding: 0px;}
+
+        div.ten p{position:absolute;}
+        div.ten p.u{   top: 1900px ;       left:100px;        }
+        div.ten p.dos{   top: 1900px;        left: 300px;  }
+        div.ten p.tres{   top: 2000px;        left:100px;     }
+        div.ten p.quatre{   top: 2000px;        left: 300px; }
+        div.ten:hover p.u{ top:1900px; left:300px}
+        div.ten:hover p.dos{ top:2000px; left:300px}
+        div.ten:hover p.tres{ top:1900px; left:100px}
+        div.ten:hover p.quatre{ top:2000px; left:100px}
+        div.ten:hover p{transition: 1s}
+    </style>
+</head>
+<body>
+    <section>
+        <div class="one">
+            <img src='http://unsplash.it/400/300?north' alt=''/>
+        </div>    
+        <div class="two">
+            <img src='http://unsplash.it/400/300?random' alt=''/>
+        </div> 
+        <div class="three">
+            <img src='http://unsplash.it/400/300?east' alt=''/>
+        </div> 
+        <div class="four">
+            <img src='http://unsplash.it/400/300?west' alt=''/>
+        </div> 
+        <div class="five">
+            <img src='http://unsplash.it/400/300?center' alt=''/>
+        </div> 
+        <div class="six"></div>
+        <div class="seven"></div>
+        <div class="eight">    </div>
+        <div class="nine">
+            <p>TEXT</p>
+        </div>
+        <div class="ten">
+            <p class="u">1</p>
+            <p class="dos">2</p>
+            <p class="tres">3</p>
+            <p class="quatre">4</p>
+        </div>
+    </section>
+</body>
+</html>
