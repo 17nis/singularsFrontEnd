@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulari</title>
+
+    <style>
+        form label{
+            width: 150px;
+            display: inline-block;
+        }
+
+        form input:not([type="checkbox"]){
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulari 1</h1>
+    <form>
+        <fieldset>
+            <label for="entrega">Data d'entrega</label>
+            <input type="date" name="entrega"><br>
+    
+            <label for="exercici">Nom de l'exercici</label>
+            <input type="text" name="exercici" placeholder="Escriu el nom" ><br>
+    
+            <label for="comentari">Comentaris</label>
+            <textarea name="" id="comentari" cols="30" rows="10"></textarea><br>
+    
+            <label for="completat">Exercici completat</label>
+            <input type="checkbox" name="completat"> <br>
+        </fieldset>
+
+        <label for="color">Color</label>
+        <input type="color" name="color"><br>
+
+        <label for="nota">Nota</label>
+        <select name="nota" id="">
+            <option value="0"></option>
+        </select>
+        
+    </form>
+    
+</body>
+</html>

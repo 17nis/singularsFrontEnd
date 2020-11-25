@@ -1,0 +1,240 @@
+@font-face {
+    font-family: playstation;
+    src: url(./res/playstation.ttf);
+}
+@font-face {
+    font-family: "play2";
+    src: url(./res/play2.ttf);
+}
+@font-face {
+    font-family: "play3";
+    src: url(./res/play3.ttf);
+}
+body{
+    margin: 0;
+    background-color: rgba(222, 242, 252, 0.808);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.general{
+    display: inline-block;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    background-color: white;
+}
+h1{
+    font-family: "playstation";
+    font-size: 3.5em;
+}
+h2{
+    font-family: "playstation";
+    color: rgb(1,171,150);
+    font-size: 1.5em;
+}
+.play2{
+    font-family: "play2";
+}
+h2.link:hover{
+    transform: scale(1.2);
+    background-color: rgba(89, 230, 213, 0.418);
+    margin-left:50px;
+}
+.link1:hover{
+    transform: scale(1.2);
+    background-color: rgba(89, 230, 213, 0.418);
+    margin-left:30px;
+}
+.targeta .link:hover{
+    transform: scale(1.2);
+    background-color: rgba(89, 230, 213, 0.418);
+}
+header img{
+    height: 150px;
+}
+nav{
+    position: sticky;
+    float: left;
+    left: 0px;
+    top: 10px;
+    width: 150px;
+    background-color: rgb(1,171,150);
+    border-radius: 10px;
+    margin: 10px;
+    display: inline-block;;
+}
+nav ul{
+    list-style-type: none;
+    display: inline;;
+}
+nav ul a{
+    text-decoration: none;
+    color: rgba(222, 242, 252, 0.808) ;
+}
+nav ul a li{
+    padding: 20px;
+    text-align: center;
+    font-family: "play3";
+    margin: 2px;
+    font-size: 0.7em;
+}
+nav ul a li:hover{
+    background-color: rgb(41, 216, 196);
+    border-radius: 10px;
+    color: white;
+    transform: scale(1.2);
+}
+
+div.cont{
+    float: left;
+    margin: 10px;
+}
+article{
+    width: 600px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    margin: 10px
+}
+article p{
+    text-align: justify;
+    font-size: 0.8em;
+}
+div.contPrincipal{
+    display: flex;  
+    width: 600px;
+    justify-content: space-between;
+}
+div.aside{
+    display: block;
+    flex-direction: column;
+    justify-content: space-around;
+}
+section.principal{
+    width: 400px;
+}
+section.aside{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+}
+.marginTop{
+    margin-top: 30px;
+}
+.aside a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    margin:2px;
+    border-radius: 10px;
+    background-color: rgb(1,171,150);
+    color:  rgba(222, 242, 252, 0.808);
+    font-family: "playstation";
+    font-size: 1em;
+}
+.aside a:hover{
+    background-color: rgb(41, 216, 196);
+    color: white;
+    transform: scale(1.2);
+} 
+
+/* grid */
+aside{
+    width: 400px;
+    position: sticky;
+    float: left;
+    top: 0px;
+    margin: 10px;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "one one two two two"
+    "one one two two two"
+    "one one two two two"
+    "one one four four five"
+    "three three four four five"
+    "three three six six six"
+    "three three six six six";
+    gap:1px;
+}
+#one{grid-area: one; width: 160px; height: 320px;}
+#two{grid-area: two; width: 240px; height: 240px;}
+#three{grid-area: three; width: 160px; height: 240px;}
+#four{grid-area: four; width: 160px; height: 160px; }
+#five{grid-area: five; width: 80px; height: 160px;}
+#six{grid-area: six; width: 240px; height: 160px;}
+
+.center{
+    text-align: center;
+}
+h3{
+    font-family: "play3";
+    border-bottom: 2px solid rgb(1,171,150);
+    padding: 5px;
+    font-size: 1.5em;
+}
+div.final{
+    margin-top: 40px;
+}
+section.final{
+    display: inline-block;
+    width: 600px;
+    display:flex;
+}
+section.targeta{
+    padding: 10px;
+    width: 30%;
+    text-align: center;
+}
+section.targeta p{
+    text-align: justify;
+    font-size: 0.7em;
+    padding: 5px;
+}
+section.targeta img{
+    width: auto;
+    height: 200px;
+}
+.targeta a{
+    text-decoration: none;
+    color: rgb(1,171,150);
+}
+.targeta a:hover{
+    transform: scale(1.2);
+    background-color: rgba(66, 238, 218, 0.897) ;
+}
+
+footer{
+    text-align: center;
+    color:white;
+    font-family: "playstation";
+    padding: 20px;
+    background-color: rgb(51,103,176);
+}
+footer h4{
+    font-size: 2em;
+    margin-bottom: 0px;
+}
+i{
+    display: inline-block;
+    color: rgb(1,171,150);
+    font-size: 48px;
+    padding: 10px;
+}
+i:hover{
+    transform: scale(1.2);
+    color: rgb(38, 221, 200);
+}
+.emptyLeft{
+    width: 200px;
+}
+.emptyRight{
+    width: 10px;
+}
+a{
+    text-decoration: none;
+}
