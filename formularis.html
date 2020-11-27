@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formularis</title>
+    <style>
+        input[type="checkbox"]{
+            display: none;
+        }
+        input#pulsable:checked + .texto{
+            background: green;
+        }
+        input#spoiler{
+            display:none;
+        }
+        label#hp{
+            background-color: yellow;
+            cursor: pointer;
+        }
+        input[type="checkbox"] + label + .hidden{
+            opacity: 0;
+        }
+        input[type="checkbox"]:checked + label + .hidden{
+            opacity: 1;
+        }
+        input[type="checkbox"]#mola + label{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(https://www.hypertechnologyweb.com/content/images/2019/06/HTML-Checkbox.png) -20px top;
+            background-size: 40px 20px;
+            cursor: pointer;
+        }
+        input[type="checkbox"]#mola:checked + label{
+            background: url(https://www.hypertechnologyweb.com/content/images/2019/06/HTML-Checkbox.png) 0 top;
+            background-size: 40px 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <label for="pulsable">pulsable</label>
+    <input type="checkbox" id="pulsable">
+    <span class="texto">amor</span>
+    
+    <br><br>
+
+    <input type="checkbox" id="spoiler">
+    <label for="spoiler" id="hp">Harry Potter y el Príncipe Mestizo</label>
+    <div class="hidden">Dumbeldore muere al final</div>
+
+    <br><br>
+    <input type="checkbox" id="mola">
+    <label for="mola"></label>
+</body>
+</html>

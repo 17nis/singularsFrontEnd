@@ -1,0 +1,100 @@
+body{
+    display: flex;
+    justify-content: left;
+    margin: 100px 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.visible , li{
+    background-color: rgb(27, 51, 63);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px ;
+}
+li:hover, .visible:hover{
+    background-color: rgb(54, 139, 150);
+}
+a{
+    text-decoration:none;
+    color: white;
+}
+/* flashIn */
+.hidden{
+    display: none;
+}
+.flashIn:hover .hidden{
+    display: flex;
+    flex-direction: column;
+}
+/* appear */
+.appear:hover .hidden{
+    display: flex;
+    flex-direction: column;
+    animation: appearAnim 1s;
+}
+@keyframes appearAnim{
+    from{opacity: 0}
+    to{opacity: 1}
+}
+
+/* persiana */
+.hidden2{
+    display:flex;
+    flex-direction: column;
+    overflow: hidden; 
+    height: 0px;
+    transition: 1s;
+}
+.persiana:hover .hidden2{
+    height: 300px;
+}
+/* persiana2 */
+.hidden5{
+    display: none;
+}
+.persiana2:hover .hidden5{
+    overflow:hidden;
+    display:flex;
+    flex-direction: column;
+    animation: moveAnim 1s;
+}
+@keyframes moveAnim{
+    from{margin-top:-50px; opacity : 0}
+    to{margin-top:0px; opacity: 1;}
+}
+/* slide */
+.zero{
+    position: relative
+}
+.one, .two, .three, .four, .five{
+    width: 60px;
+    position: absolute;
+    top: -65px;
+    z-index: -1;
+    transition: 1s;
+    opacity: 0;
+}
+.slide:hover .one{
+    top: -2px;
+    z-index: auto;
+    opacity: 1;
+}
+.slide:hover .two{
+    top: 58px;
+    z-index: auto;
+    opacity: 1;
+}
+.slide:hover .three{
+    top: 118px;
+    z-index: auto;
+    opacity: 1;
+}
+.slide:hover .four{
+    top: 175px;
+    z-index: auto;
+    opacity: 1;
+}
+.slide:hover .five{
+    top: 235px;
+    z-index: auto;
+    opacity: 1;
+}

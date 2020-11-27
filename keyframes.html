@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes</title>
+</head>
+
+<style>
+    .trigger{
+        width:140px;
+        height:140px;
+        border-radius:100%;
+        position:absolute;
+        background:rgb(41, 187, 155);
+        top: 100px;
+        left: 100px;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2em;
+        text-align: center;
+        cursor: pointer;
+    }
+    input[type="checkbox"]{
+        display: none;
+    }
+    input#trigger:checked + .ball{
+        animation: bounce 1.9s; 
+    }
+    .ball{
+        width:140px;
+        height:140px;
+        border-radius:100%;
+        background:turquoise;
+        position:absolute;
+        margin:50px;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    @keyframes bounce {
+        0%{ top:0px; left: 0px; opacity: 1;}
+        32%{top:300; left: 98px; width: 140px; height: 140px; animation-timing-function: linear;}
+        34%{top:325px; left:100px; width: 180px; height: 100px; animation-timing-function: ease-out;}
+        40%{top:225px; left:125px; width: 100px; height: 180px; animation-timing-function: linear;}
+        54%{top:150px; left:150px; width: 140px; height: 140px; animation-timing-function: ease-out;}
+        62%{top:225px; left:175px; width: 140px; height: 140px; animation-timing-function: linear;}
+        70%{top:330px; left:200px; width: 160px; height: 120px; animation-timing-function: ease-out;}
+        82%{top:250px; left:250px; width: 140px; height: 140px; animation-timing-function: ease-out;}
+        95%{top:300px; left:300px; width: 140px; height: 140px; animation-timing-function: ease-out;}
+        100%{top:300px; left:310px; width: 140px; height: 140px; animation-timing-function: ease-out;opacity: 1}
+}
+</style>
+<body>
+    <label for="trigger" class="trigger"><p>Click me!</p></div>
+    <!-- <div class="ball"></div> -->
+    <input type="checkbox" id="trigger">
+    <span class="ball"></span>
+</body>
+</html>
