@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile first</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        header{
+            width: 500px;
+            background-color: turquoise;
+        }
+        nav{
+            position: sticky;
+            top: 10px;
+            width: 500px;
+            height: auto;
+            background-color: rgba(25, 117, 108, 0.726);
+        }
+        nav ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            list-style: none;
+        }
+        nav ul li{
+            width: 400px;
+            padding: 5px;
+            margin: 5px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        article{
+            width: 500px;
+        }
+        footer{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Títol</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+        </ul> 
+    </nav>
+
+    <article>
+        <h2>H2</h2>
+        <p>subtitle</p>
+        <div class="targeta">
+            <img src='http://unsplash.it/500/100?random&gravity=center' alt=''/>
+            <p>Some more text. </p>
+        </div>
+        <div class="targeta">
+            <img src='http://unsplash.it/500/100?random&gravity=north' alt=''/>
+            <p>Some more text. </p>
+        </div>
+        <div class="targeta">
+            <img src='http://unsplash.it/500/100?random&gravity=south' alt=''/>
+            <p>Some more text. </p>
+        </div>
+        <div class="targeta">
+            <img src='http://unsplash.it/500/100?random&gravity=east' alt=''/>
+            <p>Some more text. </p>
+        </div>
+    </article>
+
+    <footer></footer>
+    
+</body>
+</html>
