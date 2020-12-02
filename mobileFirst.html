@@ -7,43 +7,107 @@
     <style>
         body{
             text-align: center;
+            margin:0;
+            background-color:rgb(255,219,185);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
         header{
             width: 500px;
-            background-color: turquoise;
+            background-color: rgb(255,201,14);
+            color: white;
+            margin:0;
+            display: flex;
+            justify-content: space-between;
         }
+        .logo{
+            margin: 5px;
+            width: 75px;
+            height: 50px;
+            background-image: url(./img/image4.jpg);
+            object-fit: contain;
+        }
+        h1{margin: 0; padding:10px;}
         nav{
             position: sticky;
-            top: 10px;
+            top: 0px;
             width: 500px;
-            height: auto;
-            background-color: rgba(25, 117, 108, 0.726);
         }
         nav ul{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             list-style: none;
+            background-color: rgb(255,211,147,0.8);
+            margin:0;
+            padding: 0;
         }
         nav ul li{
-            width: 400px;
-            padding: 5px;
+            width: 300px;
+            padding: 10px;
             margin: 5px;
+            border-radius: 5px;
+        }
+        nav ul li:hover{
+            background-color:rgb(255,229,65);
         }
         nav ul li a{
             text-decoration: none;
-            color: white;
+            color: rgb(31, 31, 31);
         }
         article{
             width: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+        .imatge{
+            width: 500px;
+            height: 200px;
+        }
+        .one{
+            background-image: url(./img/image1.jpeg); 
+            object-fit: contain;
+        }
+        .two{
+            background-image: url(./img/image2.jpg); 
+            object-fit: contain;
+        }
+        .three{
+            background-image: url(./img/image3.jpg); 
+            object-fit: contain;
+        }
+        .four{
+            background-image: url(./img/image4.jpg); 
+            object-fit: contain;
+        }
+        .targeta{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
         }
         footer{
             width: 500px;
+            background-color: rgb(255,201,14);
+            height: 50px;
+        }
+        @media(min-width: 800px){
+            header, nav, article, footer{
+                width: 1200px;
+                margin: auto;
+            }
+            header{
+                justify-content: center;
+            }
+            .imatge{
+                width: 250px;
+                height: 300px;
+            }
+            section{display:flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around;}
         }
     </style>
 </head>
 <body>
     <header>
+        <div class="logo"></div>
         <h1>Títol</h1>
     </header>
 
@@ -58,25 +122,27 @@
     <article>
         <h2>H2</h2>
         <p>subtitle</p>
-        <div class="targeta">
-            <img src='http://unsplash.it/500/100?random&gravity=center' alt=''/>
-            <p>Some more text. </p>
-        </div>
-        <div class="targeta">
-            <img src='http://unsplash.it/500/100?random&gravity=north' alt=''/>
-            <p>Some more text. </p>
-        </div>
-        <div class="targeta">
-            <img src='http://unsplash.it/500/100?random&gravity=south' alt=''/>
-            <p>Some more text. </p>
-        </div>
-        <div class="targeta">
-            <img src='http://unsplash.it/500/100?random&gravity=east' alt=''/>
-            <p>Some more text. </p>
-        </div>
+        <section>
+            <div class="targeta">
+                <div class="imatge one"></div>
+                <p>Some more text. </p>
+            </div>
+            <div class="targeta">
+                <div class="imatge two"></div>
+                <p>Some more text. </p>
+            </div>
+            <div class="targeta ">
+                <div class="imatge three"></div>
+                <p>Some more text. </p>
+            </div>
+            <div class="targeta ">
+                <div class="imatge four"></div>
+                <p>Some more text. </p>
+            </div>
+        </section>
     </article>
 
-    <footer></footer>
+    <footer>Footer</footer>
     
 </body>
 </html>
