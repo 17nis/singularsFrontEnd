@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop First</title>
+    <style>
+        @font-face{
+            font-family: got;
+            src: url(./res/Game\ of\ Thrones.ttf)
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300&display=swap');
+    </style>
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            margin: auto;
+            background-color: rgb(170,199,216);
+            text-align: center;
+            color:  rgb(45, 65, 73);
+        }
+        header{
+            width: 100%;
+            background-color: rgb(64,94,106);
+            color: rgb(203,229,243);
+            }
+        .contHead{display: flex; justify-content: space-between; max-width: 1200px; margin:auto;}
+        h1{
+            margin: 10px;
+            padding: 5px;
+            font-family: got;
+        }
+        #img{
+            width:auto; 
+            height:60px;
+            margin: 5px;
+            opacity: 0.6;
+        }
+        section{
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin:auto;
+        }
+        nav{
+            width: 20%;
+            background-color: rgb(109,142,157);
+            height: 150px;
+        }
+        ul{
+            list-style: none;
+            padding:0;
+        }
+        ul li{
+            padding: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(225, 246, 255);
+        }
+        li:hover{
+            background-color:rgb(128, 161, 177) ;
+            transform: scale(1.05);
+        }
+        article{
+            width: 60%;
+        }
+        h2, h3{font-weight: 700;}
+        #img1{
+            float: right;
+            width: 400px;
+            height: auto;
+            margin: 10px 0 10px 10px;
+        }
+        #img2{
+            float: left;
+            width: 400px;
+            height: auto;
+            margin: 10px 10px 10px 0;
+        }
+        .row{
+            padding:10px;
+            margin: 10px;
+            text-align: justify;
+        }
+        aside{
+            width: 20%;
+            background-color:  rgb(109,142,157);
+            text-align: left;
+        }
+        aside h3, aside p, aside ul{ margin-left: 10px;}
+        aside p{  color:  rgb(210, 235, 247); font-weight: 300; font-style: italic;}
+        footer{
+            width: 100%;
+            background-color: rgb(64,94,106);
+            color: rgb(166,189,199);
+            padding:10px 0px;
+            font-weight: 100;
+            font-style: italic;
+        }
+        .contFoot{max-width: 1200px;margin:auto}
+        @media (max-width: 800px){
+            body{width: 800px;}
+            header{justify-content: center;}
+            .contHead{flex-direction: row-reverse; justify-content: center;}
+            section{flex-direction: column;}
+            nav, article, aside{width: 100%;}
+            #img1, #img2{width: 100%; height: auto; float: none; margin:0;}
+            .row{margin:0; padding: 10;}
+            aside{text-align: center; }
+            h3{text-align: center;}
+            aside{ display: flex; flex-wrap: wrap;}
+            .aside1, .aside3 {width: 20%; padding-top: 25px;}
+            .aside2, .aside4{width: 70%; padding:10px}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="contHead">
+            <h1>WINTER IS COMING</h1>
+            <img src="./img/unnamed.jpg" id="img">
+        </div>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">The north</a></li>
+                <li><a href="#">Winterfell</a></li>
+                <li><a href="#">Over the Wall</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h2>The Night's Watch</h2>
+            <div class="row">
+                <img id="img1" src="./img/winter1.jpg" alt="">
+                <p>The Night's Watch is a military order which holds and guards the Wall to keep the wildlings and White Walkers from crossing into the Seven Kingdoms. The order is a shadow of its former strength and its meager forces have been decimated by recent attacks from both wildlings and White Walkers. For the past couple of centuries, the order has been led from Castle Black.</p>
+                <p>The Night's Watch is organized in three departments: the Rangers, who fight, defend the Wall and patrol the Haunted Forest; the Builders, who maintain the Wall and the castles; and the Stewards, who support and feed the members of the Watch.</p>
+            </div>
+            <div class="row">
+                <img id="img2" src="./img/winter2.jpg" alt="">
+                <p>Following the Breaching of the Wall, Jon Snow called for the remaining members of the Night's Watch to come to Winterfell to help defend against the Night King and the army of the dead since the Wall no longer serves any defensive purpose.[1] With the extinction of the White Walkers in the Battle of Winterfell, the Watch's purpose has been fulfilled, but continues to serve as a quarantine for the banished, poor and unfortunate.</p>
+            </div>
+        </article>
+        <aside>
+            <div class="aside1">
+                <h3>The Night's Watch oath</h3>
+            </div>
+            <div class="aside2">
+                <p>"Night gathers, and now my watch begins. It shall not end until my death. I shall take no wife, hold no lands, father no children. I shall wear no crowns and win no glory. I shall live and die at my post. I am the sword in the darkness. I am the watcher on the walls. I am the shield that guards the realms of men. I pledge my life and honor to the Night's Watch, for this night and all the nights to come."</p>  
+            </div> 
+            <div class="aside3">
+                <h3>Organization</h3>
+            </div>
+            <div class="aside4">
+                <ul>
+                    <li><a href="#">Rangers</a></li>
+                    <li><a href="#">Builders</a></li>
+                    <li><a href="#">Stewards</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Commanders</a></li>
+                    <li><a href="#">Recruitment</a></li>
+                    <li><a href="#">Military strenght</a></li>
+                </ul>
+            </div>
+        </aside>
+    
+    </section>
+
+    <footer>
+        <div class="contFoot">
+            <p>Info from Game of Thrones wiki.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
