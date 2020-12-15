@@ -12,6 +12,7 @@ function myFunction() {
     } else {
         image.style.display = "none";
         btnText.innerHTML = "Cake photo";
+        ingredientsList1.style.animation = "fadeIn 1s";
         ingredientsList1.style.display = "inline";
         overflow.style.overflow = "scroll";
     }
