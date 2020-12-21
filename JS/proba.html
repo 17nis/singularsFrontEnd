@@ -9,42 +9,76 @@
     
 
     <script>
+
+        function celToFar(temperature){
+            let resultat = (temperature * 1.8) + 32;
+            return resultat
+        }
+
+       // var temperature = parseInt(prompt("Temperatura en Cº"));
+        // console.log(temperature + " graus Cº són " + celToFar(temperature) + " graus Fº");
+
+        // function saludar(nom, dia, mascota){
+        //     console.log(`Hola ${nom}, com estàs en aquest meravellós ${dia} algo de text ${mascota}`)
+        // }
+
+        // // var nom = prompt("Nom");
+        // // var data = new Date();
+        // // var dia = data.getDate()
+        // // var mascota = prompt("Mascota");
+        // saludar("Genís", "dijous", "Nina");
+
         
-        let nota = parseFloat(prompt("Nota:"));
-        console.log(nota);
+        // console.clear();
 
-        if(nota>0){
-            console.log("positiu");
-        }else{
-            console.log("negatiu");
+        // var sym = "**";
+        // var x = 2;
+        // var y = 3;
+        // resultat = eval(x + sym + y);
+
+        // console.log(x +" elevat a " +  y +" és " +resultat);
+
+        // var cubo= 3**3;            // eleva al cub
+        // var velocidad= 300 * 5/18 ;     // transforma km/h en m/s
+        // var triangulo = (1/2) * 5 * 18;    // area d'un triangle
+        // var circuloArea = Math.PI * (4**2);         // calcula l'area i el perímetre d'un cercle (el valor de pi es pot obtenir amb Math.PI)
+        // var circuloPerimetre = 2*Math.PI * 4;  
+        // console.log(`Cub al cub = ${cubo}, velocitat de 300km/h a m/s = ${velocidad.toFixed()}, area triangle = ${triangulo.toFixed()}, area de un cercle = ${circuloArea.toFixed()} i el perimetre = ${circuloPerimetre.toFixed()}`)
+
+        // cubo(3);            // eleva al cub
+        // velocidad(300);     // transforma km/h en m/s
+        // triangulo(5,18);    // area d'un triangle
+        // circulo(4);         // calcula l'area i el perímetre d'un cercle (el valor de pi es pot obtenir amb Math.PI)
+
+        //metode 1- cubo1() és una funció que agafa un parametre i em retorna per la consola la frase amb el seu cub
+        // const cubo1 = (a) => {
+        //     console.log(`${a} elevat al cub és ${a*a*a}`);
+        // }
+        // cubo1(3);
+
+        // //metode 2 - cubo2() és una fucnió que agafa un paràmetre i em retorna el valor del seu cub.
+        // const cubo2 = (a) =>{
+        //     return a*a*a;
+        // }
+
+        // console.log(`3 al cub és ${cubo2(3)}`);
+        const cubo = (a) => {
+            console.log(`${a} elevat al cub és ${a*a*a}`);
         }
-        
-        if(nota%2 == 0){
-            console.log("parell");
-        }else{
-            console.log("imparell");
+        const velocidad = (v) => {
+            console.log(`${v} km/h són ${v/3.6} m/s`);
+        }
+        const triangulo = (base, altura) => {
+            console.log(`Un triangle de base ${base} i altura ${altura} té una area de  ${base*altura/2} `);
+        }
+        const circulo = (radi) => {
+            console.log(`Un cercle de radi ${radi} té un perímetre de  ${(2*Math.PI*radi).toFixed(1)} i una area de  ${(Math.PI*radi**2).toFixed(1)} `);
         }
 
-        if(nota%5 == 0){
-            console.log("multiple de 5");
-        }else{
-            console.log("no múltiple de 5");
-        }
-        
-        if(nota%10 == 0){
-            console.log("multiple de 10");
-        }else{
-            console.log("no múltiple de 10");
-        }
-    
-        if(nota > 100){
-            console.log("major de 100");
-        }else{
-            console.log("no major de 100");
-        }
-        // major de 100 o no
-
-
+        cubo(3);           
+        velocidad(300);    
+        triangulo(5,18);    
+        circulo(4); 
 
     </script>
 </body>
