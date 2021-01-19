@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercicis de DOM</title>
+</head>
+<body>
+    <article>
+        <h1>Exercici 4</h1>
+        
+        <input type="text" name="nom" id="nom" placeholder="Com et dius?">
+        <form action="">
+            <div>
+                <input type="radio" id="sr" name="pronom" value="Senyor" checked>
+                <label for="sr">Senyor</label>
+            </div>
+            <div>
+                <input type="radio" id="sra" name="pronom" value="Senyora">
+                <label for="sra">Senyora</label>
+            </div>
+            <div>
+                <input type="radio" id="hom" name="pronom" value="Hom">
+                <label for="hom">Hom</label>
+            </div>
+        </form>
+        <button id="mybtn">Saludar</button>
+        <h3 id="text"></h3>
+        
+    </article>
+    
+    <script>
+        let inputNom = document.querySelector("#nom");
+        let inputPronom = document.querySelector('input[name="pronom"]:checked');
+        document.querySelector("#mybtn").addEventListener("click", () => {
+            nom = inputNom.value;
+            pronom = inputPronom.value;
+            if(nom == ""){alert("El nom està en blanc")}
+            else{document.querySelector("#text").innerHTML = pronom + ", " + nom};
+        });
+        
+    </script>
+    
+</body>
+</html>

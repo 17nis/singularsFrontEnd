@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercicis de DOM</title>
+</head>
+<body>
+    <article>
+        <h1>Exercici 2</h1>
+
+        <input type="text" name="nom" id="nom" placeholder="Com et dius?">
+        <button id="mybtn">Saludar</button>
+    </article>  
+    <script>
+        inputNom = document.querySelector("#nom");
+        document.querySelector("#mybtn").addEventListener("click", () => {
+            let nom = inputNom.value;
+            if(nom == ""){alert("El nom està en blanc")}
+            else{console.log("Hola, "+nom)}
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+body{
+    width: 1024px;
+    height: 1200px;
+    background: rgb(36,118,164);
+    background: linear-gradient(185deg, rgba(36,118,164,1) 0%, rgba(102,189,179,1) 100%);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+    display: flex;
+    justify-content: center;;
+}
+article.main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+}

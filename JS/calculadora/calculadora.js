@@ -10,6 +10,12 @@ TODO:
   
     // Shortcut to get elements
     var el = function(element) {
+      if (element.charAt(0) === "#") { 
+        return document.querySelector(element);
+      }
+  
+      return document.querySelectorAll(element); // Otherwise, returns a nodelist
+    };
       if (element.charAt(0) === "#") { // If passed an ID...
         return document.querySelector(element); // ... returns single element
       }
