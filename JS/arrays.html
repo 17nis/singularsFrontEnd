@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let elMeuPrimerArray=["Pau", "Marc", "Antoni", "Blai", "Aniol"];
+
+        let alumne1 = elMeuPrimerArray[2];
+
+        console.log(alumne1);
+
+        //MÈTODES D'ARRAYS
+
+        console.log(elMeuPrimerArray.toString());
+
+        console.log(elMeuPrimerArray.join(" . "));
+
+        let aniol = elMeuPrimerArray.pop();
+
+        console.log([aniol, elMeuPrimerArray]);
+
+        //POPPING & PUSHING + SHIFTING -- es solen utilitzar junts
+
+        // a = arr.pop()
+            //esborra ultim element de l'array i te'l retorna. Útil per llistes de productes, vas fent pop fins que no quedad res
+        
+        //b = arr.push()
+            //per posar a l'array (com a últim element), no retorna la longitud de la nova array
+
+        //c = arr.shift() && arr.unshift 
+            //com el pop i el push, però pel principi de l'array
+
+        //SPLICE - com el substr de les strings
+        //d = arr.splice(2,2) - comença a la posició 2 i té 2 de longitud (elimina 2 a partir de la posició 2) i afegeix elements allà
+
+        let eliminats = elMeuPrimerArray.splice(2,1, "Pere", "Eva", "Martina");
+        console.log(eliminats, elMeuPrimerArray);
+
+        //CONCAT
+        let elMeuSegonArray = ["Bruno", "Pikachu", "Alsik", "Black", "Khaleesi"];
+        console.log(elMeuPrimerArray.concat(elMeuSegonArray)); //concat - concatena 2 arrays
+
+        //SLICE - 
+        a = elMeuSegonArray.splice(4);
+        console.log(a, elMeuSegonArray);
+
+        //ORDENACIÓ D'ARRAYS 
+
+        //SORT() - ordena alfabèticament
+        elMeuSegonArray.sort();
+
+        console.log(elMeuSegonArray);
+
+        //REVERSE - inverteix l'ordre dels elements
+
+        elMeuSegonArray.reverse();
+
+        console.log(elMeuSegonArray);
+
+        let elMeuTercerArray =[54, 16, 1, -5, 4, 3.13, 4, 1/3];
+        
+        elMeuTercerArray.sort();
+
+        console.log(elMeuTercerArray);
+
+        // elMeuTercerArray.sort(ordenarNum);
+
+        // function ordenarNum(a,b){
+        //     return a-b;
+        // }
+
+        //perquè funcioni li definim una funció anònima amb funcions arrow per fer la comparació
+        elMeuTercerArray.sort((a,b) => a - b);
+
+        console.log(elMeuTercerArray);
+
+        // RECORRER ARRAYS -- FOR OF
+        //for ... of ... -- recorre els elements d'un array
+        let alumnes = "";
+
+        for(alumne of elMeuPrimerArray){
+            alumnes += alumne + " ";
+            console.log(alumnes);
+        }
+        // recorrer una array amb un while -  vas recorrent i eliminant fins que no hi ha elements i alumnes es fals
+        while(alumnes){
+            alumnes[0];
+            alumnes.shift();
+        }
+
+        // recorrer una array amb un FOR -  forma més bruta, però tinguent el "for of" no es fa servir mai
+        // for (i = 0 ; i < alumnes.lenght ; i++){
+        //     alumnes[i]
+        // }
+
+         // RECORRER OBJECTES -- FOR IN
+
+        
+    
+    </script>
+</body>
+</html>

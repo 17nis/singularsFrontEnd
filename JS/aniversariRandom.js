@@ -108,7 +108,7 @@ if (aniversari.mes == 2){
 
 mesos = ["gener","febrer","març","abril","maig","juny","juliol","agost","setembre","octubre","novembre","desembre"];
 
-console.log(`La data de naixement 3 és el dia ${dia} de ${numMes} del ${any}`);
+console.log(`La data de naixement 3 és el dia ${aniversari.dia} de ${mesos[aniversari.mes -1]} del ${aniversari.any}`);
 
 //funció que retorna un sencer entre min i max inclosos
 function random(min, max){

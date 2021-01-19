@@ -1,0 +1,144 @@
+html {
+    background: #100a1c;
+    background-image: radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+    background-attachment: fixed;
+    color: #6cacc5;
+  }
+  .middle{
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      margin-bottom: 2em;
+  }
+  body {
+    color: #9bcde0;
+    font: 300 18px/1.6 "Source Sans Pro", sans-serif;
+    margin: 0;
+    padding: 5em 0 2em;
+    text-align: center;
+  }
+  
+  h1 {
+    font-weight: 300;
+    margin: 0;
+  }
+  
+  
+
+  
+  button {
+    border: 0;
+    background: rgba(92, 101, 168, 0.28);
+    color: #c2e5f3;
+    cursor: pointer;
+    float: left;
+    font: inherit;
+    margin: 0.25em;
+    width: 2.5em;
+    height: 2em;
+    transition: all 0.5s;
+  }
+  button:hover {
+    background: #201e40;
+  }
+  button:focus {
+    outline: 0;
+    /* The value fade-ins that appear */
+  }
+  button:focus::after {
+    -webkit-animation: zoom 1s;
+            animation: zoom 1s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    content: attr(data-num);
+    cursor: default;
+    font-size: 100px;
+    position: absolute;
+    top: 1.5em;
+    left: 50%;
+    text-align: center;
+    margin-left: -24px;
+    opacity: 0;
+    width: 48px;
+  }
+  
+  /* Same as above, modified for operators */
+  .ops:focus::after {
+    content: attr(data-ops);
+    margin-left: -210px;
+    width: 420px;
+  }
+  
+  /* Same as above, modified for result */
+  .equals:focus::after {
+    content: attr(data-result);
+    margin-left: -300px;
+    width: 600px;
+  }
+  
+  /* Reset button */
+  .reset {
+    background: rgba(201, 120, 116, 0.28);
+    color: #c97874;
+    font-weight: 400;
+    margin-left: -77px;
+    padding: 0.5em 1em;
+    position: absolute;
+    top: -20em;
+    left: 50%;
+    width: auto;
+    height: auto;
+    /* When button is revealed */
+  }
+  .reset:hover {
+    background: #c97874;
+    color: #100a1c;
+  }
+  .reset.show {
+    top: 20em;
+    -webkit-animation: fadein 4s;
+            animation: fadein 4s;
+  }
+  
+  /* Animations */
+  /* Values that appear onclick */
+  @-webkit-keyframes zoom {
+    0% {
+      transform: scale(0.2);
+      opacity: 1;
+    }
+    70% {
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes zoom {
+    0% {
+      transform: scale(0.2);
+      opacity: 1;
+    }
+    70% {
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+ 
+  @media (min-width: 420px) {
+    .calculator {
+      width: 12em;
+    }
+  
+    .viewer {
+      width: 8.5em;
+    }
+  
+    button {
+      margin: 0.5em;
+    }
+  }
