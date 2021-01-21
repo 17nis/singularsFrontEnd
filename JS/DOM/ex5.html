@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercicis de DOM</title>
+</head>
+<body>
+    <article>
+        <h1>Exercici 5</h1>
+        
+        <input type="text" name="nom" id="nom" placeholder="Com et dius?">
+        <select name="color" id="color">
+            <option value="red">Vermell</option>
+            <option value="blue">Blau</option>
+            <option value="orange">Taronja</option>
+            <option value="green">Verd</option>
+        </select>
+        <button id="mybtn">Saludar</button>
+        <h3 id="text"></h3>
+        
+    </article>
+    
+    <script>
+        let inputNom = document.querySelector("#nom");
+        document.querySelector("#mybtn").addEventListener("click", () => {
+            nom = inputNom.value;
+            let color = document.querySelector('#color').value;
+            if(nom == ""){alert("El nom està en blanc")}
+            else{console.log("%c"+nom, `color:${color}`)};
+        });
+        
+    </script>
+    
+</body>
+</html>

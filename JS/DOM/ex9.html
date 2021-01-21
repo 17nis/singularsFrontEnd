@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercicis de DOM</title>
+</head>
+<body>
+    <article>
+        <h1>Exercici 9</h1>
+        
+        <select name="temp1" id="temp1">
+            <option value="f">Fahrenheit</option>
+            <option value="c">Celsius</option>
+            <option value="k">Kelvin</option>
+        </select>
+        <input type="number" name="num" id="num" placeholder="Temperatura">
+        <select name="temp2" id="temp2">
+            <option value="f">Fahrenheit</option>
+            <option value="c">Celsius</option>
+            <option value="k">Kelvin</option>
+        </select>
+        <button id="mybtn">Convertir temperatura</button>
+        <h3 id="text"></h3>
+        
+    </article>
+    
+    <script>
+        document.querySelector("#mybtn").addEventListener("click", () => {
+            let num = parseFloat(document.querySelector("#num").value);
+            let temp1 = document.querySelector("#temp1").value;
+            let temp2 = document.querySelector("#temp2").value;
+            if(num == ""){alert("El camp està en blanc")}
+            else{if(temp1 == "f"){
+                    if(temp2 == "c"){resposta = (num - 32)*5/9}
+                    else if(temp2== "k"){resposta = (num - 32)*5/9 + 273.15}
+                    else{resposta = num}
+                }else if(temp1 == "c"){
+                    if(temp2 == "f"){resposta = (num * 9/5) +32}
+                    else if(temp2 == "k"){resposta = num + 273.15}
+                    else{resposta = num}
+                }else if(temp1 == "k"){
+                    if(temp2 == "f"){resposta = (num-273.15) *9/5 + 32}
+                    else if(temp2== "c"){resposta = num - 273.15}
+                    else{resposta = num}
+                }
+                document.querySelector("#text").innerHTML = resposta
+            }
+        });
+        
+    </script>
+    
+</body>
+</html>

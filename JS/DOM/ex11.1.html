@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicis de DOM</title>
-    <link rel="stylesheet" href="ex11.css">
+    <link rel="stylesheet" href="style11.1.css">
 </head>
 <body>
     <article>
-        <h1>Exercici 11</h1>
+        <h1>Exercici 11.1</h1>
         <h2>No divideixis per 0, passen coses inesperades...</h2>
 
         <div class="calculadora" id="calculadora">
-
             <div class="row">
                 <button id="clear" class="clear">C</button>
+                <button id="shift" class="clear" value="1">S</button>
                 <div id="viewer" class="viewer">0</div>
             </div>
         
@@ -36,20 +36,20 @@
                 <button class="num" data-num="1">1</button>
                 <button class="num" data-num="2">2</button>
                 <button class="num" data-num="3">3</button>
-                <button data-ops="times" class="ops">*</button>
+                <button data-ops="times" id="times" class="ops">*</button>
             </div>
 
             <div class="row">
                 <button class="num" data-num="0">0</button>
                 <button class="num" data-num=".">.</button>
                 <button id="equals" class="equals" data-result="">=</button>
-                <button data-ops="divided by" class="ops">/</button>
+                <button data-ops="divided by" id="divide" class="ops">/</button>
             </div>
         </div>
         <embed id="secret" src="https://matias.ma/nsfw/" width="100%" height="auto" type="">
     </article>  
 
 
-    <script src="ex11.js"></script>
+    <script src="ex11.1.js"></script>
 </body>
 </html>

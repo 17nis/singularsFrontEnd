@@ -1,0 +1,66 @@
+body{
+    width: 1024px;
+    height: 100vh;
+    background: rgb(36,118,164);
+    background: linear-gradient(185deg, rgba(36,118,164,1) 0%, rgba(102,189,179,1) 100%);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+    display: flex;
+    justify-content: center;;
+}
+article{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 20px;
+}
+h1, h2{text-align: center;}
+h1{font-size: 2em;}
+h2{font-size: 0.9em;}
+div.calculadora{
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+div.row{
+    width: 250px;
+}
+button{
+    background-color: rgb(42, 90, 112);
+    margin:2px;
+    width: 50px;
+    height: 35px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+button:focus {outline: 0}
+button:hover{background-color: rgb(49, 111, 139);}
+#viewer{
+    float:right;
+    margin-right: 15px;
+    margin-top:10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+#secret{
+    width: 270px;
+    height: 160px;
+    position: absolute;
+    top: 204px;
+    left: 515px;
+    font-weight: 100;
+    background-image: url(./resources/topSecret.png);
+    background-color:rgb(42, 90, 112);
+    display: none;
+}
+
+
+
+
+

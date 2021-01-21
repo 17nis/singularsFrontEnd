@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercicis de DOM</title>
+</head>
+<body>
+    <article>
+        <h1>Exercici 10</h1>
+        <input type="number" name="num1" id="num1" placeholder="Valor 1">
+        <select name="operador" id="operador">
+            <option value="+">suma</option>
+            <option value="-">resta</option>
+            <option value="*">multiplicació</option>
+            <option value="/">divisió</option>
+        </select>
+        <input type="number" name="num2" id="num2" placeholder="Valor 2">
+        </select>
+        <button id="mybtn">Calcular</button>
+        <h3 id="text"></h3>
+        
+    </article>
+    
+    <script>
+        document.querySelector("#mybtn").addEventListener("click", () => {
+            let operador = document.querySelector("#operador").value;
+            let valor1 = parseFloat(document.querySelector("#num1").value);
+            let valor2 = parseFloat(document.querySelector("#num2").value);
+            if(isNaN(valor1) || isNaN(valor2)){alert("El camp està en blanc")}
+            else{switch (operador){
+                case "+":
+                    resposta = `La suma de ${valor1} i ${valor2} és de ${valor1 + valor2}`;
+                    break;
+                case "-":
+                    resposta =`La resta de ${valor1} i ${valor2} és de ${valor1 - valor2}`;
+                    break;
+                case "*":
+                    resposta =`La multiplicació de ${valor1} i ${valor2} és de ${valor1 * valor2}`;
+                    break;
+                case "/":
+                    if(valor2 == 0){resposta ="No hauries de dividir per 0!"}
+                    else{resposta =`La divisió de ${valor1} i ${valor2} és de ${valor1 / valor2}`}
+                    break;
+                default: 
+                    resposta ="%cERROR. Introdueix un operador vàlid (suma / resta / mult / divi)";
+            }}
+                document.querySelector("#text").innerHTML = resposta;
+        });
+        
+    </script>
+    
+</body>
+</html>
