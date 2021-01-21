@@ -897,41 +897,41 @@ console.log("Repeticions en N = 45 " + contador45);
 console.log("Repeticions en N = 50 " + contador50);
 console.log("Números amb coincidencia:" + coincidencia);
 
-// versio Omar
-function diaRandom(){
-    let dia=Math.floor(Math.random()*366);
-    return dia;
-}
-function arrayRandom(N){
-    var arr=[];
-    for(let i= 0; i<N; i++){
-        arr.push(diaRandom());
-    }
-    return arr;
-} 
+// // versio Omar
+// function diaRandom(){
+//     let dia=Math.floor(Math.random()*366);
+//     return dia;
+// }
+// function arrayRandom(N){
+//     var arr=[];
+//     for(let i= 0; i<N; i++){
+//         arr.push(diaRandom());
+//     }
+//     return arr;
+// } 
 
 
-function comprovarRepeticions(arr){
-    arr.sort((a,b) => a-b); //és una mica igual com estigui ordenat
-    for(let i = 0; i<arr.length;i++){
-        if(arr[i] == arr[i+1]) return true;
-    }
-    return false
-}
+// function comprovarRepeticions(arr){
+//     arr.sort((a,b) => a-b); //és una mica igual com estigui ordenat
+//     for(let i = 0; i<arr.length;i++){
+//         if(arr[i] == arr[i+1]) return true;
+//     }
+//     return false
+// }
 
-function comprovarRepeticionsLlarg(arr){ //MÈTODE LLARG, moltes comprovacions
-    for(let i = 0; i<arr.length;i++){
-        for(let j= i+1; j< arr.length; j++){
-            if(arr[i] == arr[j]) return true;
-        }
-    }
-    return false
-}
+// function comprovarRepeticionsLlarg(arr){ //MÈTODE LLARG, moltes comprovacions
+//     for(let i = 0; i<arr.length;i++){
+//         for(let j= i+1; j< arr.length; j++){
+//             if(arr[i] == arr[j]) return true;
+//         }
+//     }
+//     return false
+// }
 
-for (let i = 0; i<55; i+=5){
-    console.log(i);
-}
-console.log(`${i}personas `)
+// for (let i = 0; i<55; i+=5){
+//     console.log(i);
+// }
+// console.log(`${i}personas `)
 
 //* ------------------------------ Objectes -------------------------------------
 console.log("%c-------EXERCICI 32----------","color: orange" );
@@ -1063,7 +1063,6 @@ for(let i = 0; i< seccionsArr.length -2; i++){
     
 }
 
-
 console.log("%c-------EXERCICI 35----------","color: orange" );
 // exercici 35: gestionar un CSV. El programa ha d'agafar un string en format CSV i ficar tota la informació dins un array
 // d'objectes amb els noms de les columnes com a propietats
@@ -1087,7 +1086,7 @@ for(let i = 1; i < arrGeneral.length; i++) {
     let data = arrGeneral[i].split(',');
     let obj = {};
     for(var j = 0; j < data.length; j++) {
-        obj[header[j].trim()] = data[j].trim();
+        obj[header[j].trim()] = data[j].trim(); // també es podria fer sense el header però amb un obj[arrGeneral[0][j]]=arrGeneral[i][j]
     }
     objecteCSV.push(obj);
 }
@@ -1105,12 +1104,7 @@ console.log(objecteCSV);
 //                  Description = "",
 //                  Price = 3000.00
 //                 } ];
-
-
-
 console.log("-------------------- FI DELS EXERCICIS --------------------");
-
-
 
 
 
