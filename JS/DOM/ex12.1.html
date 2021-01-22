@@ -8,7 +8,7 @@
 </head>
 <body>
     <article>
-        <h1>Exercici 12: Llista de la compra</h1>
+        <h1>Exercici 12.1: Llista de la compra</h1>
         <input type="text" name="producte" id="producte" placeholder="Producte">
         <form action="">
             <div>
@@ -33,6 +33,7 @@
             </div>
         </form>
         <button id="mybtn">Afegir</button>
+        <button id="ordenar">Ordenar</button>
         <h3>Llista de la compra</h3>
         <pre id="text"></pre>
         
@@ -75,6 +76,7 @@
         let producte = document.querySelector('#producte'); 
         let seccio;
         let button = document.querySelector("#mybtn");
+        let ordenar = document.querySelector("#ordenar");
         let seccionsArr = Object.keys(llistaCompra);
         let text = document.querySelector("#text");
         let html = "";
@@ -83,11 +85,16 @@
             producte = this.producte.value;
             seccio = document.querySelector('input[name="compra"]:checked').value;
             llistaCompra.afegir(producte, seccio);
+            html = "";
+            text.innerHTML = llista(seccionsArr, llistaCompra);
+            })
+
+        ordenar.addEventListener("click", () =>{
             llistaCompra.ordenar();
             html = "";
             text.innerHTML = llista(seccionsArr, llistaCompra);
             })
-        
+
         function llista(seccionsArr, llistaCompra){
             for(let i = 0; i< seccionsArr.length -2; i++){
                 html += "\n" + "-" + seccionsArr[i];

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercicis de DOM</title>
+</head>
+<body>
+    <article>
+        <h1>Exercici 13: Llista de la compra</h1>
+        <input type="text" name="nom" id="nom" placeholder="Nom">
+        <select name="material" id="material">
+            <option value="sushi">Sushi</option>
+            <option value="croquetes">Croquetes</option>
+            <option value="croissants">Croissants</option>
+            <option value="pizza">Pizza</option>
+        </select>
+        <select name="mida" id="mida">
+            <option value="gran">Gran</option>
+            <option value="mitjana">Mitjana</option>
+            <option value="petita">Petita</option>
+        </select>
+        <input type="text" name="missatge" id="missatge" placeholder="Missatge">
+
+        <button id="mybtn">Fer la comanda</button>
+        <pre id="text"></pre>
+    </article>
+    <script>
+        let comanda = document.querySelector("#mybtn");
+        let nom = document.querySelector("#nom");
+        let mida = document.querySelector("#mida");
+        let material = document.querySelector("#material");
+        let missatge = document.querySelector("#missatge");
+        let text = document.querySelector("#text");
+
+        comanda.addEventListener("click", () =>{
+            text.innerHTML = nom.value + " ha demanat una caixa "+mida.value+" de " + material.value + " ("+ missatge.value+")";
+        })
+    </script>
+</body>
+</html>

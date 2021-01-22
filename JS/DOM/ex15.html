@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style15.css">
+    <title>Exercicis de DOM</title>
+</head>
+<body>
+    <article>
+        <h1>Exercici 15</h1>
+        
+        <div id="buttons">
+            <button id="blau">Blau</button>
+            <button id="verd">Verd</button>
+            <button id="vermell">Vermell</button>
+            <button id="groc">Groc</button>
+        </div>
+        <div id="cont">
+            <div class="show red"></div>
+            <div class="show blue"></div>
+            <div class="show green"></div>
+            <div class="show yellow"></div>
+            <div class="show green"></div>
+            <div class="show blue"></div>
+            <div class="show red"></div>
+            <div class="show red"></div>
+            <div class="show yellow"></div>
+            <div class="show blue"></div>
+        </div>
+    </article>
+    <script>
+        let blauBtn = document.querySelector("#blau");
+        let verdBtn = document.querySelector("#verd");
+        let vermellBtn = document.querySelector("#vermell");
+        let grocBtn = document.querySelector("#groc");
+        let cont = document.querySelector("#cont");
+        let color = document.querySelectorAll(".show");
+
+        blauBtn.addEventListener("click", () => {
+            mostrar("blue");        
+        })
+        verdBtn.addEventListener("click", () => {
+            mostrar("green");        
+        })
+        grocBtn.addEventListener("click", () => {
+            mostrar("yellow");        
+        })
+        vermellBtn.addEventListener("click", () => {
+            mostrar("red");        
+        })
+
+
+        function mostrar(c) {
+            color.forEach((el) => {      // recorre un array amb tots els elements del DOM seleccionats
+                if (el.classList.contains(c)) {
+                    if(el.classList.contains("show")){
+                        el.classList.remove("show");
+                    }else{
+                        el.classList.add("show");
+                    }
+                }                             // si no, l'amaga
+            })
+        }
+    </script>
+</body>
+</html>

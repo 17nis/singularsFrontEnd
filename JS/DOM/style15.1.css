@@ -1,0 +1,67 @@
+body{
+    width: 1024px;
+    height: 1250px;
+    background: rgb(36,118,164);
+    background: linear-gradient(185deg, rgba(36,118,164,1) 0%, rgba(102,189,179,1) 100%);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+}
+article{
+    max-width: 900px;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    margin-bottom:20px;
+}
+#buttons{
+    display: inline;
+}
+#cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 800px;
+}
+.block{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.red{
+    background-color: rgba(207, 22, 22, 0.829);
+}
+.blue{
+    background-color: rgb(43, 45, 139);
+}
+.yellow{
+    background-color: rgba(223, 201, 10, 0.883);
+}
+.green{
+    background-color: rgb(49, 187, 49);
+}
+.anOut{
+    animation: anOut 1s linear;
+}
+
+.anIn{
+    animation: anIn 1s linear;
+}
+
+@keyframes anOut {
+    from {display:flex;}
+    to {display: none;}
+}
+@keyframes anIn {
+    from {display: none;}
+    to {display: flex;}
+}
