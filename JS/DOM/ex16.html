@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="myss" rel="stylesheet" href="estil1.css">
+    <title>Exercicis de DOM</title>
+</head>
+<body>
+    <h1>Exercici 16</h1>
+    
+    <ul class="nav">
+        <li><a href="" id="old">Old</a></li>
+        <li><a href="" id="at">Atemporal</a></li>
+        <li><a href="" id="fl">Flashy</a></li>
+    </ul>
+    <div>
+        <img class="right" src='http://unsplash.it/g/200/120?random&gravity=center' alt=''/>
+        <H2>Notícia 1</H2>
+        <p class="primer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque pariatur ratione quisquam maiores perferendis ipsam repellendus velit assumenda vitae alias unde inventore explicabo <span class="highlight">consequatur dicta nihil</span>, quis et magni sequi placeat voluptates exercitationem? Delectus, beatae. Impedit ea omnis saepe ad minus. Obcaecati reprehenderit optio dignissimos, nam laboriosam harum accusamus mollitia odio exercitationem repellendus perspiciatis, consectetur velit, autem odit iusto quia!</p>
+    </div>
+    <div> 
+        <img class="left" src='http://unsplash.it/g/250/300?random&gravity=center' alt=''/>
+        <H2>Notícia 2</H2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque pariatur ratione quisquam maiores perferendis ipsam repellendus velit assumenda vitae alias unde inventore explicabo consequatur dicta nihil, quis et magni sequi <span class="quote">placeat voluptates exercitationem?</span> Delectus, beatae. Impedit ea omnis saepe ad minus. Obcaecati reprehenderit optio dignissimos, nam laboriosam harum accusamus mollitia odio exercitationem repellendus perspiciatis, consectetur velit, autem odit iusto quia!</p>
+    </div>
+
+    <script>
+        let old = document.querySelector("#old");
+        let at = document.querySelector("#at");
+        let fl = document.querySelector("#fl");
+        let ss = document.querySelector("#myss");
+
+        old.addEventListener("click", (a) =>{
+            a.preventDefault();
+            ss.href = "./estil1.css";
+        });
+        at.addEventListener("click", (a) =>{
+            a.preventDefault();
+            ss.href = "./estil2.css";
+        });
+        fl.addEventListener("click", (a) =>{
+            a.preventDefault();
+            ss.href = "./estil3.css";
+        });
+    </script>
+</body>
+</html>
