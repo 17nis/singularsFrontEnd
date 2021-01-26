@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lightbox.css">
+    <title>exercicis de DOM</title>
+</head>
+<body>
+    <article>
+        <h1>Exercici de Lightbox</h1>
+        
+        <button id="mybtn">Lightbox</button>
+        <div id="darkbackground">
+            <div id="lightbox">
+                <a href="" id="tancar" style="float: right ; text-decoration: none; font-size: 3em; margin-right:10px">&times;</a>
+                <p>Hello there</p>
+                <p id="petit">Puedes cerrar con un click en el boton, la icona de cerrar o fuera del lightbox</p>
+                <button id="close">Close</button>
+            </div>
+        </div>
+    </article>
+<script>
+    let db = document.querySelector("#darkbackground");
+    let lb = document.querySelector("#lightbox");
+    let btn = document.querySelector("#mybtn");
+    let close = document.querySelector("#close");
+    let tancar = document.querySelector("#tancar");
+
+    btn.addEventListener("click",(e)=>{
+        e.stopPropagation();
+        db.style.display = "inline";
+    });
+    close.addEventListener("click",()=>{
+        db.style.display = "none";
+    });
+    tancar.addEventListener("click",(e)=>{
+        e.preventDefault();
+        db.style.display = "none";
+    });
+    window.addEventListener("click",(e)=>{
+        if(!lb.contains(e.target)){
+            db.style.display = "none";
+        }
+    });
+</script>
+
+</body>
+</html>
