@@ -8,49 +8,49 @@
 </head>
 <body>
     <article>
-        <h1>Exercici "Countdown"</h1>
-        <h2>Final del curs</h2>
+        <h1>Exercici "Time"</h1>
+
         <div id="cont">
-            <div id="countdown"></div>
-            <div><pre>     DY      HR      MIN      SEC    </pre></div>
+            <p id="data">Data: </p>
+            <textarea name="" id="input"></textarea>
+            <div id="output"></div>
         </div>
     </article>
 
     <script>
-        var end = new Date('03/07/2021 14:45');  // data final del contador
+        var input = document.querySelector("#input")
+        var output = document.querySelector("#output")
         
-        // milisegons en un...
-        const SEC = 1000;
-        const MIN = SEC * 60;
-        const HR = MIN * 60;
-        const DAY = HR * 24;
-
-        var timer;
+        var i = 0;
         
-        function showRemaining() {
-            var now = new Date();
-            var distance = end - now;   // temps restant en milisegons
-
-            if (distance < 0) {
-                // para el crono
-                clearInterval(timer);
-                document.querySelector('#countdown').innerHTML = 'EXPIRED!';
-                document.querySelector('#cont pre').innerHTML = ""
-                return;
-            }
-
-            // calcula dies, hores, minuts i segons
-            var days = Math.floor(distance / DAY);
-            var hours = Math.floor((distance % DAY) / HR);
-            var minutes = Math.floor((distance % HR) / MIN);
-            var seconds = Math.floor((distance % MIN) / SEC);
+        setInterval(() => {
+            output.innerHTML = input.value;
+        }, 2000);
+        
+        console.log("hola");
+        
+        
+        var data = document.querySelector("#data");
+        
+        var timer = setInterval(() => {
+            data.innerHTML = "Data: " + new Date();
+            i++;
             
-            // els pinta
-            document.querySelector('#countdown').innerHTML = days + ':' + hours + ':' + minutes + ':' + seconds;
-        }
+            if(i == 10) clearInterval(timer);
+        }, 1000)
         
-        timer = setInterval(showRemaining, 1000);
-
+        
     </script>
+    
+    
+    
+    <!-- setTimeout(): dispara una funció quan passin els milisegons que posem -->
+    
+    <script>
+        const alerta = _ => window.alert("Han passat 5 segons")
+        
+        setTimeout(alerta, 5000)
+    </script>
+
 </body>
 </html>
