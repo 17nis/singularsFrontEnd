@@ -1,0 +1,21 @@
+copy = {
+    titol: {id: "title1",
+            cat: "musclos",
+            esp: "mejillones",
+            eng: "muscles"},
+    
+    bio: {id: "bio",
+         cat: "la meva bio",
+         esp: "mi bio",
+         eng: "my bio"}
+}
+
+function lang(lang) {
+    for (const key in copy) {
+        if (Object.hasOwnProperty.call(object, key)) {
+            const element = object[key];
+
+            document.querySelector(`#${key.id}`).innerHTML = key.lang
+        }
+    }
+}

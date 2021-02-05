@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+body {
+  margin: 0;
+  font-family: 'Nunito';
+  background: #3568B7;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cont {
+  height: 100vh;
+}
+
+.cont h1 {
+  text-align: center;
+  color: white;
+  margin: 2px;
+  text-shadow: 5px 5px 5px #2b456b;
+}
+
+.cont section {
+  display: flex;
+  align-items: center;
+}
+
+.cont section .slider1Window {
+  border-radius: 10px;
+  width: 800px;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 20px 20px 15px #2b456b;
+}
+
+.cont section .slider1Window .slider1 {
+  display: flex;
+  height: auto;
+  transition: 1s;
+}
+
+.cont section .slider1Window .slider1 img {
+  object-fit: cover;
+  width: 800px;
+  height: auto;
+}
+
+.cont section button {
+  background-color: #2d62b3;
+  font-size: 3em;
+  color: white;
+  margin: 50px;
+  border: transparent;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 20px 20px 15px #2b456b;
+}
+
+.cont section button:hover {
+  background-color: #265cac;
+}
+
+.cont section button:active {
+  background-color: #2e4d7a;
+  box-shadow: 10px 10px 5px #2b456b;
+}
+
+.slider2Window {
+  border-radius: 10px;
+  width: 800px;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 20px 20px 15px #2b456b;
+}
+
+.slider2Window .slider2 {
+  display: flex;
+  height: auto;
+}
+
+.slider2Window .slider2 img {
+  object-fit: cover;
+  width: 800px;
+  height: auto;
+}
+
+.slider3Window {
+  border-radius: 10px;
+  width: 800px;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 20px 20px 15px #2b456b;
+}
+
+.slider3Window .slider3 {
+  display: flex;
+  height: auto;
+  transition: 1s;
+}
+
+.slider3Window .slider3 img {
+  object-fit: cover;
+  width: 800px;
+  height: auto;
+  transition: 1s;
+}
+
+.slider4Window {
+  border-radius: 10px;
+  width: 800px;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 20px 20px 15px #2b456b;
+}
+
+.slider4Window .slider4 {
+  display: flex;
+  height: auto;
+}
+
+.slider4Window .slider4 img {
+  object-fit: cover;
+  width: 800px;
+  height: auto;
+}
+/*# sourceMappingURL=main.css.map */

@@ -25,9 +25,7 @@
         
         setInterval(() => {
             output.innerHTML = input.value;
-        }, 2000);
-        
-        console.log("hola");
+        }, 10);
         
         
         var data = document.querySelector("#data");
@@ -36,7 +34,7 @@
             data.innerHTML = "Data: " + new Date();
             i++;
             
-            if(i == 10) clearInterval(timer);
+        //     if(i == 10) clearInterval(timer);
         }, 1000)
         
         
@@ -47,7 +45,7 @@
     <!-- setTimeout(): dispara una funció quan passin els milisegons que posem -->
     
     <script>
-        const alerta = _ => window.alert("Han passat 5 segons")
+        const alerta = _ => console.log("Han passat 5 segons");
         
         setTimeout(alerta, 5000)
     </script>
