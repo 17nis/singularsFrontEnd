@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/post.css">
+  <title>exPost</title>
+</head>
+<body>
+
+  <section>
+    <input type="text" name="user" id="user" placeholder="user">
+    <input type="text" name="message" id="message" placeholder="message">
+    <button id="send">Send</button>
+    <button id="refresh">Refresh</button>
+  </section>
+  <section>
+    <div class="miss"></div>
+  </section>
+
+  <script>
+
+    const database = "https://singulars-2020-default-rtdb.firebaseio.com/";
+    const miss = document.querySelector(".miss");
+    const send = document.querySelector("#send");
+    const refresh = document.querySelector("#refresh");
+    var usuari = document.querySelector("#user");
+    var missatge = document.querySelector("#message");
+
+    send.addEventListener("click", ()=>{
+      fetch(database + "missatges.json", {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({"user": usuari.value,
+                                  "message": missatge.value})
+        })
+        .then(res => res.json())
+        .then(res => {
+          console.log('enviat')
+          console.log(res)
+        })
+        miss.innerHTML += `U: ${usuari.value} -- M: ${missatge.value} </br>`;
+        usuari.value = "";
+        missatge.value = "";
+    })
+
+    refresh.addEventListener("click", ()=>{
+      miss.innerHTML = "";
+      fetch(database + "missatges.json")
+        .then(res => res.json())
+        .then(res => {
+          console.log(res);
+          for (id in res){
+            miss.innerHTML += `U: ${res[id].user} -- M: ${res[id].message} </br>`;
+          }
+        })
+    })
+        
+        //*** afegint entrades amb el mètode POST
+        // fetch(database + "missatges.json", {
+        //     method: 'PUT',
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify({"user": "M. Rajoy",
+        //                           "message": "No conozco a Mariano"})
+        // })
+        // .then(res => res.json())
+        // .then(res => console.log(res));
+
+        // 
+
+        //
+          
+        
+
+        //  *** afegint entrades amb el mètode POST
+        // fetch(database + "missatges.json", {
+        //     method: 'Post',
+        //     body: JSON.stringify({
+        //       "alanisawesome": {
+        //         "date_of_birth": "June 23, 1912",
+        //         "full_name": "Alan Turing"
+        //       }
+        //     })
+        // })
+        // .then(res => res.json())
+        // .then(res => console.log(res));
+
+
+  </script>
+  
+</body>
+</html>

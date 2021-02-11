@@ -1,0 +1,41 @@
+body {
+  background-color: #212121;
+  color: whitesmoke;
+  display: inline;
+  margin: auto;
+  font-family: "Poppins";
+}
+
+section {
+  margin: 2% 10%;
+  display: flex;
+  justify-content: center;
+}
+
+section input {
+  margin: 20px;
+  border-radius: 5px;
+  outline: none;
+}
+
+section button {
+  margin: 20px;
+  background-color: orange;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: transparent;
+  outline: none;
+}
+
+section button:active {
+  background-color: #ffc558;
+}
+
+section .miss {
+  column-count: 2;
+  font-size: small;
+  column-gap: 100px;
+}
+/*# sourceMappingURL=post.css.map */

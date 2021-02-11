@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poller+One&display=swap");
+@font-face {
+  font-family: 'StarWars';
+  src: url(/resources/Starjhol.ttf);
+}
+
+body {
+  background-color: #323232;
+  color: white;
+  font-family: "Poller One";
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #ffd900;
+  font-family: 'StarWars';
+  font-size: 3em;
+}
+
+h2 {
+  color: #ffd900;
+}
+
+.planets, .planets2, .residents, .residents2 {
+  line-height: 1.5rem;
+  column-count: 3;
+  width: 800px;
+}
+
+.planets .planets, .planets2 .planets, .residents .planets, .residents2 .planets {
+  column-count: 2;
+}
+
+.content {
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  display: none;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+#particles-js .loading {
+  position: relative;
+  top: 50px;
+  left: 35%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#particles-js .loading .title {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  color: #ffd900;
+  font-family: 'StarWars';
+  font-size: 3em;
+}
+
+#particles-js .loading .title span {
+  position: relative;
+  padding: 2px;
+}
+
+#particles-js .loading img {
+  position: absolute;
+  top: 60px;
+  width: 400px;
+  height: 400px;
+  animation: jump 3s infinite ease-in-out;
+}
+
+@keyframes jump {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 20px);
+  }
+  0% {
+    transform: translate(0, 0);
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+/*# sourceMappingURL=main.css.map */

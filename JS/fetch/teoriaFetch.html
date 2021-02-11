@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Fetch</title>
+</head>
+<body>
+  <div id="particles-js">
+    <div class="loading">
+      <div class="title">
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+        <span>loading</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+      </div>
+      <img src="/resources/Death_Star-RO_U_Visual_Guide.png" alt="loading death star">
+    </div>
+  </div>
+  <div class="content">
+    <h1>Star Wars APi</h1>
+    <h2>Planetes ordenats per diàmetre</h2>
+    <div class="planets"></div>
+    <h2>Tots els planetes</h2>
+    <div class="planets2"></div>
+    <h2>Residents</h2>
+    <div class="residents"></div>
+    <h2>Residents ordenats</h2>
+    <div class="residents2"></div>
+  </div>
+
+  <script src="planetes.js"></script>
+  <script src="planetes2.js"></script>
+  <script src="residents.js"></script>
+  <script src="residents2.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <script>
+    particlesJS.load('particles-js','particles.json',function(){
+      console.log('Hey, I hope you like my code! :D');
+    })
+  </script>
+  
+</body>
+</html>
