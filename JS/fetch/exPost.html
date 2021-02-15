@@ -21,7 +21,7 @@
 
   <script>
 
-    const database = "https://singulars-2020-default-rtdb.firebaseio.com/";
+    const database = "https://singulars2020-prova-default-rtdb.firebaseio.com/";
     const miss = document.querySelector(".miss");
     const send = document.querySelector("#send");
     const refresh = document.querySelector("#refresh");
@@ -29,7 +29,7 @@
     var missatge = document.querySelector("#message");
 
     send.addEventListener("click", ()=>{
-      fetch(database + "missatges.json", {
+      fetch(database + 'message.json', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
@@ -42,54 +42,80 @@
           console.log('enviat')
           console.log(res)
         })
-        miss.innerHTML += `U: ${usuari.value} -- M: ${missatge.value} </br>`;
+        miss.innerHTML += `U: ${usuari.value} -- M: ${missatge.value}.  </br>`;
         usuari.value = "";
         missatge.value = "";
     })
 
     refresh.addEventListener("click", ()=>{
       miss.innerHTML = "";
-      fetch(database + "missatges.json")
+      fetch(database + "message.json")
         .then(res => res.json())
         .then(res => {
           console.log(res);
           for (id in res){
-            miss.innerHTML += `U: ${res[id].user} -- M: ${res[id].message} </br>`;
+            miss.innerHTML += `U: ${res[id].user} -- M: ${res[id].message}. La id és ${id}  </br>`;
           }
         })
     })
         
-        //*** afegint entrades amb el mètode POST
-        // fetch(database + "missatges.json", {
-        //     method: 'PUT',
-        //     headers: {
+    // get an entry
+    function get(){
+      fetch(database + 'missatges.json', {
+        method: 'GET'
+      })
+      .then(res => res.json())
+      .then(res => {
+        console.log(res)
+        var missatge = res;
+        for(id in missatge){
+          miss.innerHTML += `U: ${res[id].user} -- M: ${res[id].message}. La id és ${id} </br>`;
+        }
+      })
+    }
+    // get()
+
+
+    // delete an entry
+    function erase(id){
+      fetch(database + 'message/' + id + '.json', {
+        method: 'DELETE',
+      })
+      .then(res => res.json())
+      .then(res => console.log(res));
+    }
+
+    // erase("-MTG-QvUkGx-N5RAktoD");
+
+    // Patch an entry ---afegeix o modifica etiquetes existents
+    function patch(id, obj){
+      fetch(database + 'message/' + id + '.json', {
+        method:"PATCH",
+        // headers: {
         //         "Content-Type": "application/json",
         //     },
-        //     body: JSON.stringify({"user": "M. Rajoy",
-        //                           "message": "No conozco a Mariano"})
-        // })
-        // .then(res => res.json())
-        // .then(res => console.log(res));
+        body: JSON.stringify(obj)
+      })
+      .then(res => res.json())
+      .then(res => console.log(res));
+    }
 
-        // 
+    // patch('-MTG-aG6zBDpCdwL8LcT', {name: "canvi", message: "patch"})
 
-        //
-          
-        
+    // PUT an entry  ---sobreescriu tot
+    function put(id, obj){
+      fetch(database + 'message/' + id + '.json', {
+        method:"PUT",
+        // headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        body: JSON.stringify(obj)
+      })
+      .then(res => res.json())
+      .then(res => console.log(res));
+    }
 
-        //  *** afegint entrades amb el mètode POST
-        // fetch(database + "missatges.json", {
-        //     method: 'Post',
-        //     body: JSON.stringify({
-        //       "alanisawesome": {
-        //         "date_of_birth": "June 23, 1912",
-        //         "full_name": "Alan Turing"
-        //       }
-        //     })
-        // })
-        // .then(res => res.json())
-        // .then(res => console.log(res));
-
+    // put('-MTG-aG6zBDpCdwL8LcT', {name: "canvi", message: "patch"})
 
   </script>
   

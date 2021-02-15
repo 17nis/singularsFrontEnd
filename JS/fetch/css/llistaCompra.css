@@ -1,0 +1,92 @@
+body {
+  background-color: #212121;
+  color: whitesmoke;
+  display: inline;
+  margin: auto;
+  font-family: "Poppins";
+}
+
+h1 {
+  text-align: center;
+}
+
+section {
+  margin: 2% 10%;
+  display: flex;
+  justify-content: center;
+}
+
+section input, section select {
+  margin: 20px;
+  border-radius: 5px;
+  outline: none;
+}
+
+section button {
+  margin: 20px;
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: transparent;
+  outline: none;
+}
+
+section button:active {
+  background-color: #ffc558;
+}
+
+section .miss {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#delete {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+#add {
+  background-color: rgba(179, 255, 0, 0.5);
+}
+
+.item {
+  width: 300px;
+  margin: 10px;
+  background-color: #363636cc;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.deletes {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: white;
+  float: right;
+  margin: 1px 10px;
+  font-size: 0.8em;
+  cursor: pointer;
+  line-height: 0.5;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.deletes:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.edit {
+  background-color: rgba(255, 166, 0, 0.76);
+  color: white;
+  float: right;
+  margin: 1px 10px;
+  font-size: 0.8em;
+  cursor: pointer;
+  line-height: 0.5;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.edit:hover {
+  background-color: rgba(255, 166, 0, 0.96);
+}
+/*# sourceMappingURL=llistaCompra.css.map */
